@@ -1,0 +1,24 @@
+:root {
+  --c-white: white;
+  --c-bd-gray: #8b8b8b;
+  --c-bg-gray: #bdbdbd;
+}
+
+.bordered {
+  border-color: var(--c-bd-gray);
+  border-width: 3px;
+  border-style: solid;
+}
+
+.bd-left-color-white {
+  border-left-color: var(--c-white);
+}
+.bd-top-color-white {
+  border-top-color: var(--c-white);
+}
+.bd-right-color-white {
+  border-right-color: var(--c-white);
+}
+.bd-bottom-color-white {
+  border-bottom-color: var(--c-white);
+}
