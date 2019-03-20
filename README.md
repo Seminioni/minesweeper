@@ -1,8 +1,8 @@
-# minesweeper
+# Minesweeper
 
 ## Info
 
-A Minesweeper app on Vue.js
+Minesweeper game written on Vue.js
 
 ## Project setup
 
