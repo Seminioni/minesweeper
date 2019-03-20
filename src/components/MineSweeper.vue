@@ -1,9 +1,15 @@
 <template>
   <div class="minesweeper bd-left-color-white bd-top-color-white bordered">
     <header class="minesweeper-header bd-bottom-color-white bd-right-color-white bordered">
-      <div class="bombs-left-to-find"></div>
-      <div class="funny-face"></div>
-      <div class="time-counter"></div>
+      <counter 
+        class="bombs-left-counter"
+        number="777">
+      </counter>
+      <funny-ebalo></funny-ebalo>
+      <counter 
+        class="time-left-counter"
+        number="666">
+      </counter>
     </header>
     <main class="field">
       <div class="field-row">
@@ -18,10 +24,18 @@
 </template>
 
 <script>
-  export default {};
+  import Counter from "@/components/Counter";
+  import FunnyEbalo from "@/components/FunnyEbalo";
+
+  export default {
+    components: {
+      Counter,
+      FunnyEbalo
+    }
+  };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .minesweeper {
     background-color: var(--c-bg-gray);
     min-height: 300px;
@@ -30,6 +44,10 @@
   }
 
   .minesweeper-header {
-    min-height: 50px;
+    height: 40px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 </style>
