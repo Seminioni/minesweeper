@@ -1,8 +1,8 @@
 <template>
   <div class="counter">
-    <i class="digit" :class="first"></i>
-    <i class="digit" :class="second"></i>
-    <i class="digit" :class="third"></i>
+    <i class="digit" :class="digit.first"></i>
+    <i class="digit" :class="digit.second"></i>
+    <i class="digit" :class="digit.third"></i>
   </div>
 </template>
 
@@ -15,24 +15,18 @@
     },
 
     computed: {
-      first() {
-        const digit = this.getNumberDigitAt(0);
-        return this.getClassNameByDigit(digit);
+      digit() {
+        const numbers = this.number.split('');
+
+        return {
+          first: this.getClassNameByDigit(numbers[0]),
+          second: this.getClassNameByDigit(numbers[1]),
+          third: this.getClassNameByDigit(numbers[2])
+        }
       },
-      second() {
-        const digit = this.getNumberDigitAt(1);
-        return this.getClassNameByDigit(digit);
-      },
-      third() {
-        const digit = this.getNumberDigitAt(2);
-        return this.getClassNameByDigit(digit);
-      }
     },
 
     methods: {
-      getNumberDigitAt(position) {
-        return this.number.charAt(position);
-      },
       getClassNameByDigit(digit) {
         return `digit-${digit}`;
       }

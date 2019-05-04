@@ -1,6 +1,6 @@
 <template lang="html">
     <div id="app">
-      <mine-sweeper></mine-sweeper>
+      <mine-sweeper size='400'></mine-sweeper>
     </div>
 </template>
 
